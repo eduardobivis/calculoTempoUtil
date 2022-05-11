@@ -11,12 +11,12 @@ function calculoTempoUtil(DateTime $inicio, DateTime $termino, $horarioInicial, 
 	]; 
 
 	$interval = new DateInterval('P1D');
-	$periods = new DatePeriod($inicio, $interval, $termino);
+	$periodos = new DatePeriod($inicio, $interval, $termino);
 
 	$totalDias = -1;
-	foreach ($periods as $period) {
-		if (!in_array($period->format('N'), $diasUteis)) continue;
-		if (in_array($period->format('*-m-d'), $feriados)) continue;
+	foreach ($periodos as $periodo) {
+		if (!in_array($periodo->format('N'), $diasUteis)) continue;
+		if (in_array($periodo->format('*-m-d'), $feriados)) continue;
 		$totalDias++;
 	}
 
