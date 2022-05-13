@@ -1,4 +1,4 @@
-public class SLA {
+class SLA {
 
 	################################
 	# Tempo entre Início e Término #
